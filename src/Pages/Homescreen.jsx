@@ -32,18 +32,20 @@ const Homescreen = () => {
 
   return (
     <div>
-      <h1>La boutique de Benoît Marlière</h1>
-      <div className="row">
-        {cardCategories.map((card) => (
-          <CategoryCard
-            card={card}
-            title={card.title}
-            description={card.description}
-            image={card.image}
-            key={card.id}
-          />
-        ))}
-        <ContactForm />
+      <div className="main">
+        <h1>La boutique de Benoît Marlière</h1>
+        <div className="row">
+          {cardCategories.map((card) => (
+            <CategoryCard
+              card={card}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+              key={card.id}
+            />
+          ))}
+          <ContactForm />
+        </div>
       </div>
     </div>
   );

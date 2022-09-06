@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryCard from "../Components/CategoryCard";
+import ContactForm from "../Components/ContactForm";
 
 const Homescreen = () => {
   const cardCategories = [
@@ -42,6 +43,7 @@ const Homescreen = () => {
             key={card.id}
           />
         ))}
+        <ContactForm />
       </div>
     </div>
   );

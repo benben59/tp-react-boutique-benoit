@@ -1,7 +1,14 @@
 function ContactForm() {
+    const handleFormSubmit = (evt) => {
+        evt.preventDefault();
+        const jsonData = Object.fromEntries(new FormData(evt.target));
+        console.log(jsonData)
+    
+      };
+
   return (
     <>
-      <form className="p-5 bg-dark">
+      <form className="p-5 bg-dark" onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <input
             name="fullName"
@@ -36,7 +43,7 @@ function ContactForm() {
             placeholder="Votre message"
           />
         </div>
-        <button className="btn btn-primary">Envoyer</button>
+        <button type="submit" className="btn btn-primary">Envoyer</button>
       </form>
     </>
   );
